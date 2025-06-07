@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eGain Visitor Insights API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            background-color: #f8f9fa;
+        }
+        .method {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <h1>eGain Visitor Insights API</h1>
+    <p>This API provides insights about website visitors for eGain sales representatives.</p>
+    
+    <h2>API Endpoints</h2>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <code>/api/companies</code></p>
+        <p>Get a list of companies that have visited the website.</p>
+        <p>Query parameters:</p>
+        <ul>
+            <li><code>search</code>: Search by company name</li>
+            <li><code>country</code>: Filter by country</li>
+            <li><code>sort_by</code>: Field to sort by (default: visit_count)</li>
+            <li><code>sort_order</code>: Sort order (asc or desc, default: desc)</li>
+            <li><code>page</code>: Page number (default: 1)</li>
+            <li><code>per_page</code>: Items per page (default: 10)</li>
+        </ul>
+    </div>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <code>/api/companies/{company_id}</code></p>
+        <p>Get details about a specific company.</p>
+    </div>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <code>/api/companies/{company_id}/visits</code></p>
+        <p>Get all visits from a specific company.</p>
+    </div>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <code>/api/visits</code></p>
+        <p>Get a list of all website visits.</p>
+        <p>Query parameters:</p>
+        <ul>
+            <li><code>company_id</code>: Filter by company ID</li>
+            <li><code>page_path</code>: Filter by page path</li>
+            <li><code>device</code>: Filter by device type</li>
+            <li><code>page</code>: Page number (default: 1)</li>
+            <li><code>per_page</code>: Items per page (default: 10)</li>
+        </ul>
+    </div>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <code>/api/statistics</code></p>
+        <p>Get statistics about website visitors.</p>
+    </div>
+    
+    <h2>Example Response</h2>
+    <pre>
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Acme Corporation",
+      "isp": "Acme ISP",
+      "country": "United States",
+      "city": "New York",
+      "visit_count": 42
+    },
+    ...
+  ],
+  "total": 100,
+  "page": 1,
+  "per_page": 10,
+  "total_pages": 10
+}
+    </pre>
+    
+    <p>For more information, please refer to the <a href="https://github.com/yourusername/visitor-insights-api">GitHub repository</a>.</p>
+</body>
+</html>
+

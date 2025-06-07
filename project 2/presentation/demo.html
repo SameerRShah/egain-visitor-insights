@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .demo-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .demo-link {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        transition: all 0.3s ease;
+      }
+      .demo-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+      }
+      .future-item {
+        background: rgba(255, 255, 255, 0.05);
+        border-left: 4px solid #10b981;
+      }
+      .stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+          radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.5), transparent),
+          radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+          radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.5), transparent);
+        background-repeat: repeat;
+        background-size: 200px 100px;
+        animation: sparkle 20s linear infinite;
+      }
+      @keyframes sparkle {
+        from { transform: translateX(0); }
+        to { transform: translateX(200px); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16 text-white relative">
+      <!-- Animated background -->
+      <div class="stars"></div>
+      
+      <!-- Header -->
+      <div class="text-center mb-12 relative z-10">
+        <h1 class="text-5xl font-bold mb-4">Live Demo & Next Steps</h1>
+        <p class="text-xl text-gray-300">Experience the Solution in Action</p>
+      </div>
+      
+      <!-- Demo links -->
+      <div class="grid grid-cols-2 gap-8 mb-12 relative z-10">
+        <!-- Frontend Demo -->
+        <div class="demo-card p-8 rounded-lg">
+          <div class="text-center mb-6">
+            <i class="fas fa-desktop text-5xl text-blue-400 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">Frontend Application</h3>
+            <p class="text-gray-300">Interactive dashboard for sales representatives</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 text-sm">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Company search and filtering</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Visit history and analytics</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Responsive design</span>
+            </div>
+          </div>
+          
+          <a href="https://czcwwvdb.manus.space" target="_blank" class="demo-link block w-full text-center py-3 px-6 rounded-lg font-bold mt-6 text-white no-underline">
+            <i class="fas fa-external-link-alt mr-2"></i>
+            View Live Demo
+          </a>
+        </div>
+        
+        <!-- Backend API -->
+        <div class="demo-card p-8 rounded-lg">
+          <div class="text-center mb-6">
+            <i class="fas fa-server text-5xl text-green-400 mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">Backend API</h3>
+            <p class="text-gray-300">RESTful API for data access and processing</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 text-sm">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Company and visit endpoints</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Search and filtering support</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Statistics and analytics</span>
+            </div>
+          </div>
+          
+          <a href="https://4zmhqivclje7.manus.space" target="_blank" class="demo-link block w-full text-center py-3 px-6 rounded-lg font-bold mt-6 text-white no-underline">
+            <i class="fas fa-external-link-alt mr-2"></i>
+            View API Docs
+          </a>
+        </div>
+      </div>
+      
+      <!-- Future enhancements -->
+      <div class="relative z-10">
+        <h2 class="text-3xl font-bold text-center mb-8">Future Enhancements</h2>
+        
+        <div class="grid grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="future-item p-4 rounded-lg">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-robot mr-3 text-blue-400"></i>
+                AI-Powered Lead Scoring
+              </h4>
+              <p class="text-gray-300 text-sm">Machine learning algorithms to identify high-value prospects</p>
+            </div>
+            
+            <div class="future-item p-4 rounded-lg">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-bell mr-3 text-yellow-400"></i>
+                Real-time Notifications
+              </h4>
+              <p class="text-gray-300 text-sm">Instant alerts when target companies visit the website</p>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="future-item p-4 rounded-lg">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-link mr-3 text-purple-400"></i>
+                CRM Integration
+              </h4>
+              <p class="text-gray-300 text-sm">Seamless integration with Salesforce, HubSpot, and other CRMs</p>
+            </div>
+            
+            <div class="future-item p-4 rounded-lg">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-chart-line mr-3 text-green-400"></i>
+                Advanced Analytics
+              </h4>
+              <p class="text-gray-300 text-sm">Predictive analytics and behavioral pattern recognition</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="text-center mt-12 relative z-10">
+        <p class="text-gray-400">
+          <i class="fas fa-clock mr-2"></i>
+          Demo links available for 15 days from submission
+        </p>
+        <p class="text-gray-400 mt-2">
+          <i class="fas fa-code mr-2"></i>
+          Source code and documentation available on GitHub
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+

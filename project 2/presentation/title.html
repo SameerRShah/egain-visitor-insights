@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .geometric-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+      }
+      .title-text {
+        font-family: 'Inter', sans-serif;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container flex items-center justify-center">
+      <!-- Geometric background -->
+      <div class="geometric-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1280 720">
+          <circle cx="200" cy="150" r="80" fill="white" opacity="0.1"/>
+          <circle cx="1100" cy="600" r="120" fill="white" opacity="0.1"/>
+          <polygon points="800,50 900,200 700,200" fill="white" opacity="0.1"/>
+          <rect x="50" y="500" width="150" height="150" fill="white" opacity="0.1" transform="rotate(45 125 575)"/>
+        </svg>
+      </div>
+      
+      <!-- Main content -->
+      <div class="text-center text-white z-10">
+        <div class="mb-8">
+          <i class="fas fa-chart-line text-6xl mb-6 text-blue-200"></i>
+        </div>
+        
+        <h1 class="title-text text-6xl font-bold mb-4">
+          eGain Visitor Insights
+        </h1>
+        
+        <h2 class="title-text text-2xl font-light mb-8 text-blue-100">
+          Sales Engineer Home Assignment
+        </h2>
+        
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
+          <p class="text-xl text-blue-100 mb-4">
+            Empowering Sales Representatives with Website Visitor Intelligence
+          </p>
+          <div class="flex justify-center items-center space-x-6 text-blue-200">
+            <div class="flex items-center">
+              <i class="fas fa-building mr-2"></i>
+              <span>Company Insights</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-search mr-2"></i>
+              <span>Smart Search</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-analytics mr-2"></i>
+              <span>Real-time Analytics</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-8 text-blue-200">
+          <p class="text-lg">Prototype Solution for eGain Sales Team</p>
+          <p class="text-base mt-2 font-medium">by Sameer Rehman Shah</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

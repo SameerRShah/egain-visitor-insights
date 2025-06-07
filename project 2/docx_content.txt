@@ -1,0 +1,10 @@
+What to Build
+
+Given a set of visitor weblogs for eGain.com website for a few weeks, build a prototype solution for eGain sales reps via a simple web interface. The solution should empower the sales rep with the best possible insights about the visitors and should be easily searchable by various attributes (you decide what attributes might be useful for an eGain sales rep for any given account/contact), including any other insights you can offer about the visitor or visitors from any target company of interest for the rep. feel free to consider using commercial and open-source info services to build your solution..
+.
+How to Submit
+The following must be submitted
+A live link where we can see the project in action. This link must be available for a period of 15 days from the date the project was submitted.
+Presentation (no more than 5 slides) explaining how the prototype solution was designed and developed.
+Pointer to GitHub repo along with a readme
+

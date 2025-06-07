@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        position: relative;
+      }
+      .architecture-box {
+        background: white;
+        border: 2px solid #e2e8f0;
+        transition: all 0.3s ease;
+      }
+      .architecture-box:hover {
+        border-color: #667eea;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      .flow-arrow {
+        color: #667eea;
+      }
+      .tech-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-gray-800 mb-4">Solution Architecture</h1>
+        <p class="text-xl text-gray-600">Three-Tier Architecture for Scalable Visitor Intelligence</p>
+      </div>
+      
+      <!-- Architecture diagram -->
+      <div class="grid grid-cols-3 gap-8 mb-8">
+        <!-- Data Layer -->
+        <div class="architecture-box p-6 rounded-lg text-center">
+          <div class="mb-4">
+            <i class="fas fa-database text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Data Processing</h3>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p>• Raw weblog analysis</p>
+            <p>• IP enrichment with company data</p>
+            <p>• SQLite database storage</p>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-1 justify-center">
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">Python</span>
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">IP-API</span>
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">SQLite</span>
+          </div>
+        </div>
+        
+        <!-- Arrow -->
+        <div class="flex items-center justify-center">
+          <i class="fas fa-arrow-right text-3xl flow-arrow"></i>
+        </div>
+        
+        <!-- API Layer -->
+        <div class="architecture-box p-6 rounded-lg text-center">
+          <div class="mb-4">
+            <i class="fas fa-server text-4xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Backend API</h3>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p>• RESTful API endpoints</p>
+            <p>• Search & filtering logic</p>
+            <p>• Data aggregation</p>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-1 justify-center">
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">Flask</span>
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">CORS</span>
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">REST</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Arrow down -->
+      <div class="text-center mb-8">
+        <i class="fas fa-arrow-down text-3xl flow-arrow"></i>
+      </div>
+      
+      <!-- Frontend Layer -->
+      <div class="grid grid-cols-2 gap-8">
+        <div class="architecture-box p-6 rounded-lg text-center">
+          <div class="mb-4">
+            <i class="fas fa-desktop text-4xl text-purple-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Frontend Interface</h3>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p>• Interactive dashboard</p>
+            <p>• Company search & filtering</p>
+            <p>• Responsive design</p>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-1 justify-center">
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">React</span>
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">TailwindCSS</span>
+            <span class="tech-badge text-white px-2 py-1 rounded text-xs">Shadcn UI</span>
+          </div>
+        </div>
+        
+        <!-- Key Features -->
+        <div class="bg-white p-6 rounded-lg border-2 border-blue-200">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <i class="fas fa-star mr-3 text-yellow-500"></i>
+            Key Features
+          </h3>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-building text-blue-500"></i>
+              <span>Company Insights</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-search text-blue-500"></i>
+              <span>Smart Search</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-chart-bar text-blue-500"></i>
+              <span>Analytics Dashboard</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-history text-blue-500"></i>
+              <span>Visit History</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-filter text-blue-500"></i>
+              <span>Advanced Filtering</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-mobile-alt text-blue-500"></i>
+              <span>Mobile Responsive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
